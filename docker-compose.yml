@@ -1,0 +1,38 @@
+version: '3'
+services:
+  #PHP Service
+  php:
+    container_name: short_url_local_php
+    image: short_url:latest
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www:cached
+      - ./docker/PHP/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - short_url-network
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: short_url_local_nginx
+    restart: unless-stopped
+    depends_on:
+      - php
+    tty: true
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www:cached
+      - ./docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - short_url-network
+
+#Docker Networks
+networks:
+  short_url-network:
+    driver: bridge

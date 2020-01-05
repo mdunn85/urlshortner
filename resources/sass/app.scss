@@ -1,0 +1,18 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Biryani&display=swap');
+
+h1, h2, h3, h4, h5, h6, p, label, input, button {
+    font-family: 'Biryani', sans-serif;
+}
+
+.image-background {
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.btn{
+    background-color: #2bfdb7;
+    border-color: #13C2B7;
+    color: #31459C;
+}
