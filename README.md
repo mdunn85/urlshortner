@@ -6,7 +6,7 @@ Simple site to generate a shorten url. Built on Laravel and React. The generated
 
 ## Setup
 
-The site can be run on Docker or valet
+The site can be run on docker or valet. To run on docker run the following commands in the projects root directory.
 
 ### Build the Dockerfile
 
