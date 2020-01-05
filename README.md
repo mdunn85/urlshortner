@@ -6,6 +6,8 @@ Simple site to generate a shorten url. Built on Laravel and React. The generated
 
 ## Setup
 
+The site can be run on Docker or valet
+
 ### Build the Dockerfile
 
 `docker build --rm -f "Dockerfile" -t short_url:latest "."`
@@ -20,7 +22,7 @@ __* This might take a while__
 
 `docker exec short_url_local_php composer install`
 
-### To run unit test run
+### To run unit tests run
 
 `docker exec short_url_local_php vendor/bin/phpunit`
 
