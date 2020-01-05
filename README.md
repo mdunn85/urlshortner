@@ -1,8 +1,8 @@
 # Url Shortner
 
-## Intro
+## Summary
 
-Simple site to generate a shorten url. Built on Laravel and React. The generated url is a 6 character long, each character will be one of the following: **abcdefghijklmnopqrstuvwxyz0123456789** This gives 2,176,782,336 unique combinations (36^6)
+This is a simple site to generate a short URL. Paste in your long URL and you'll get back a shorter version 6 characters long. It has been built using Laravel and React. Characters can be any one of the following: **abcdefghijklmnopqrstuvwxyz0123456789** This gives 2,176,782,336 unique combinations (36^6)
 
 ## Setup
 
